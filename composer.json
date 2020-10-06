@@ -9,7 +9,22 @@
             "email": "sergos08.sv@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Filesystem\\": "project/src/Filesystem"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spot2D\\Tests\\": "spot2d/tests/"
+        }
+    },
     "require": {
+        "php": ">=7.4",
         "league/flysystem": "^1.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.15",
+        "squizlabs/php_codesniffer": "*"
     }
 }
