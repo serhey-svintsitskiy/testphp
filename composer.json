@@ -1,0 +1,15 @@
+{  
+    "name": "serhey-svintsitskiy/testphp",
+    "description": "description",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "serhii svintsitskyi",
+            "email": "sergos08.sv@gmail.com"
+        }
+    ],
+    "require": {
+        "league/flysystem": "^1.1"
+    }
+}
