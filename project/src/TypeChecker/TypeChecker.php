@@ -12,28 +12,14 @@ class TypeChecker
     
     public function checkType($value): string
     {
-        if (!is_numeric($value)) {
-            return self::TYPE_STRING;
-        }
 
-        if (is_int($value)) {
+        if (is_int($value) || (string)(int)$value === $value) {
             return self::TYPE_INT;
         }
-        if (is_float($value)) {
+        if (is_float($value) || (string)(float)$value === $value) {
             return self::TYPE_FLOAT;
         }
-        
-        if (is_string($value)) {
-            if ((string)(int)$value === $value) {
-                return self::TYPE_INT;
-            }
-            
-            if ((string)(float)$value === $value) {
-                return self::TYPE_FLOAT;
-            }
-        }
 
-        
         return self::TYPE_STRING;
     }
 }
